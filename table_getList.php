@@ -1,6 +1,13 @@
 <?
 CModule::IncludeModule('highloadblock'); //модуль highload инфоблоков
 
+/*
+$HL_BLOCK_ID = 1;
+$hlblock = HLBT::getById($HL_BLOCK_ID)->fetch();
+$entity = HLBT::compileEntity($hlblock);
+var_dump($entity->getFields()); //all fields
+var_dump($entity_data_class::getCount()); //count
+*/
    $rsData = \Bitrix\Highloadblock\HighloadBlockTable::getList(
      array(
        'filter'=>array(
