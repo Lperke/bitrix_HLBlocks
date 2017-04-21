@@ -1,14 +1,16 @@
 <?
 
-$res = $hlDataClass::getList(array(
+$res = $hlDataClass::getList(
+    array(
              'filter' => array(
                  'UF_XML_ID' => $XML_ID, 
              ), 
              'select' => array("*"), 
              'order' => array(
-                 'UF_NAME' => 'asc'
+                 'UF_NAME' => 'asc' //'ID'
              ),
-         )
+             //'limit' => 10 //don't use in this case. filter UF_XML_ID is unique
+      )
       );
       if ($row = $res->fetch()) {
           $HLinfo =$row;
