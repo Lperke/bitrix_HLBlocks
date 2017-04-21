@@ -4,6 +4,16 @@ $res = $hlDataClass::getList(
     array(
              'filter' => array(
                  'UF_XML_ID' => $XML_ID, 
+                 'UF_ACTIVE' => '1', // y/n
+                 Array(
+                      "LOGIC"=>"OR", //OR AND
+                      Array(
+                         "UF_NAME"=>'с%' //start from
+                      ),
+                      Array(
+                         "UF_NAME"=>'к%'//start from
+                      )
+                   )
              ), 
              'select' => array("*"), 
              'order' => array(
