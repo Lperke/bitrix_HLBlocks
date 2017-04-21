@@ -1,0 +1,16 @@
+<?
+
+$res = $hlDataClass::getList(array(
+             'filter' => array(
+                 'UF_XML_ID' => $XML_ID, 
+             ), 
+             'select' => array("*"), 
+             'order' => array(
+                 'UF_NAME' => 'asc'
+             ),
+         )
+      );
+      if ($row = $res->fetch()) {
+          $HLinfo =$row;
+      } 
+?>
